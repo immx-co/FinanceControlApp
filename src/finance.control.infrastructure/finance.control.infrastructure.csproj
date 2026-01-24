@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\finance.control.application\finance.control.application.csproj" />
+  </ItemGroup>
+
 </Project>

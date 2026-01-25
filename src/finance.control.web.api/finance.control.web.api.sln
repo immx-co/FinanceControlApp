@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 18
-VisualStudioVersion = 18.2.11415.280 d18.0
+VisualStudioVersion = 18.2.11415.280
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "finance.control.web.api", "finance.control.web.api.csproj", "{7EDDE384-AEEB-4F84-8F29-A4AAE79F120D}"
 EndProject
@@ -12,6 +12,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "finance.control.core", "..\finance.control.core\finance.control.core.csproj", "{F1C9E161-DC0B-4DB2-B72E-DC9E3FD276F0}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "finance.control.application", "..\finance.control.application\finance.control.application.csproj", "{BA4D5E19-6A45-4DA2-AF57-8BFACEC7A63F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "finance.control.windows.client", "..\finance.control.windows.client\finance.control.windows.client.csproj", "{436A2E1C-701C-4053-92B3-48A8B090DB81}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{BA4D5E19-6A45-4DA2-AF57-8BFACEC7A63F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BA4D5E19-6A45-4DA2-AF57-8BFACEC7A63F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BA4D5E19-6A45-4DA2-AF57-8BFACEC7A63F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{436A2E1C-701C-4053-92B3-48A8B090DB81}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{436A2E1C-701C-4053-92B3-48A8B090DB81}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{436A2E1C-701C-4053-92B3-48A8B090DB81}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{436A2E1C-701C-4053-92B3-48A8B090DB81}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

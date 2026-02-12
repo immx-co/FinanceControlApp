@@ -43,6 +43,8 @@ namespace finance.control.windows.client
                 servicesCollection.AddSingleton<IScreen, IScreenRealization>();
 
                 servicesCollection.AddSingleton<NavigationViewModel>();
+                servicesCollection.AddSingleton<PostsViewModel>();
+                servicesCollection.AddSingleton<ChartsViewModel>();
 
                 ServiceProvider servicesProvider = servicesCollection.BuildServiceProvider();
 

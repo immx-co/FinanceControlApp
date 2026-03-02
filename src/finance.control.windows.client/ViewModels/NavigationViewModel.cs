@@ -30,6 +30,12 @@ public class NavigationViewModel : ReactiveObject, IDisposable
 
     public ReactiveCommand<Unit, Unit> GoChartsWindow { get; }
 
+    public ReactiveCommand<Unit, Unit> GoAddCategoryWindow { get; }
+
+    public ReactiveCommand<Unit, Unit> GoReportsWindow { get; }
+
+    public ReactiveCommand<Unit, Unit> GoProfileWindow { get; }
+
     #endregion
 
     #region Active View Properties
@@ -48,6 +54,27 @@ public class NavigationViewModel : ReactiveObject, IDisposable
         set => this.RaiseAndSetIfChanged(ref _isChartsWindowActive, value);
     }
 
+    private bool _isAddCategoryWindowActive;
+    public bool IsAddCategoryWindowActive
+    {
+        get => _isAddCategoryWindowActive;
+        set => this.RaiseAndSetIfChanged(ref _isAddCategoryWindowActive, value);
+    }
+
+    private bool _isReportsWindowActive;
+    public bool IsReportsWindowActive
+    {
+        get => _isReportsWindowActive;
+        set => this.RaiseAndSetIfChanged(ref _isReportsWindowActive, value);
+    }
+
+    private bool _isProfileWindowActive;
+    public bool IsProfileWindowActive
+    {
+        get => _isProfileWindowActive;
+        set => this.RaiseAndSetIfChanged(ref _isProfileWindowActive, value);
+    }
+
     #endregion
 
     #region .ctor
@@ -61,6 +88,9 @@ public class NavigationViewModel : ReactiveObject, IDisposable
 
         GoPostsWindow = ReactiveCommand.Create(NavigateToPostsWindow);
         GoChartsWindow = ReactiveCommand.Create(NavigateToChartsWindow);
+        GoAddCategoryWindow = ReactiveCommand.Create(NavigateToAddCategoryWindow);
+        GoReportsWindow = ReactiveCommand.Create(NavigateToReportsWindow);
+        GoProfileWindow = ReactiveCommand.Create(NavigateToProfileWindow);
     }
 
     #endregion
@@ -84,6 +114,27 @@ public class NavigationViewModel : ReactiveObject, IDisposable
         CheckDisposedCancellationToken();
         SetActiveView(typeof(ChartsViewModel));
         Router.Navigate.Execute(_serviceProvider.GetRequiredService<ChartsViewModel>());
+    }
+
+    private void NavigateToAddCategoryWindow()
+    {
+        CheckDisposedCancellationToken();
+        SetActiveView(typeof(AddCategoryViewModel));
+        Router.Navigate.Execute(_serviceProvider.GetRequiredService<AddCategoryViewModel>());
+    }
+
+    private void NavigateToReportsWindow()
+    {
+        CheckDisposedCancellationToken();
+        SetActiveView(typeof(ReportsViewModel));
+        Router.Navigate.Execute(_serviceProvider.GetRequiredService<ReportsViewModel>());
+    }
+
+    private void NavigateToProfileWindow()
+    {
+        CheckDisposedCancellationToken();
+        SetActiveView(typeof(ProfileViewModel));
+        Router.Navigate.Execute(_serviceProvider.GetRequiredService<ProfileViewModel>());
     }
 
     private void CheckDisposedCancellationToken()

@@ -45,6 +45,9 @@ namespace finance.control.windows.client
                 servicesCollection.AddSingleton<NavigationViewModel>();
                 servicesCollection.AddSingleton<PostsViewModel>();
                 servicesCollection.AddSingleton<ChartsViewModel>();
+                servicesCollection.AddSingleton<AddCategoryViewModel>();
+                servicesCollection.AddSingleton<ReportsViewModel>();
+                servicesCollection.AddSingleton<ProfileViewModel>();
 
                 ServiceProvider servicesProvider = servicesCollection.BuildServiceProvider();
 

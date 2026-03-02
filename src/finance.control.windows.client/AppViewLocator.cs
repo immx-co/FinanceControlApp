@@ -10,6 +10,9 @@ public class AppViewLocator : IViewLocator
     {
         PostsViewModel context => new PostsView { ViewModel = context },
         ChartsViewModel context => new ChartsView { ViewModel = context },
+        AddCategoryViewModel context => new AddCategoryView { ViewModel = context },
+        ReportsViewModel context => new ReportsView { ViewModel = context },
+        ProfileViewModel context => new ProfileView { ViewModel = context },
         _ => throw new ArgumentOutOfRangeException(nameof(viewModel))
     };
 }

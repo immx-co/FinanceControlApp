@@ -7,6 +7,61 @@
              x:Class="finance.control.windows.client.AddCategoryView"
              x:DataType="vm:AddCategoryViewModel">
   
-    AddCategory
+    <Grid RowDefinitions="Auto,1,*"
+        Background="#111111">
+
+    <Grid Grid.Row="0"
+          ColumnDefinitions="*,*,*"
+          Margin="20,20,20,10">
+
+      <Border Grid.Column="0"
+              Height="50"
+			  Margin="0,0,20,0"
+              Background="#4A4A4A"
+              CornerRadius="10">
+        <Button Content="Расход"
+                HorizontalAlignment="Stretch"
+                VerticalAlignment="Stretch"
+                HorizontalContentAlignment="Center"
+                VerticalContentAlignment="Center"
+                Background="Transparent"
+                BorderBrush="Transparent" />
+      </Border>
+
+      <Border Grid.Column="1"
+              Height="50"
+			  Margin="0,0,20,0"
+              Background="#4A4A4A"
+              CornerRadius="10">
+        <Button Content="Доход"
+                HorizontalAlignment="Stretch"
+                VerticalAlignment="Stretch"
+                HorizontalContentAlignment="Center"
+                VerticalContentAlignment="Center"
+                Background="Transparent"
+                BorderBrush="Transparent" />
+      </Border>
+
+      <Border Grid.Column="2"
+              Height="50"
+              Background="#4A4A4A"
+              CornerRadius="10">
+        <Button Content="Перевод"
+                HorizontalAlignment="Stretch"
+                VerticalAlignment="Stretch"
+                HorizontalContentAlignment="Center"
+                VerticalContentAlignment="Center"
+                Background="Transparent"
+                BorderBrush="Transparent" />
+      </Border>
+    </Grid>
+
+    <Border Grid.Row="1"
+            Height="1"
+            Margin="20,0,20,0"
+            Background="#333333" />
+
+    <Grid Grid.Row="2"/>
+  </Grid>
 
 </UserControl>
